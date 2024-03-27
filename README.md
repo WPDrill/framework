@@ -2,9 +2,7 @@
 
 WPDrill is a WordPress Plugin Development Framework for human. It's designed to simplify the process of creating and managing WordPress plugins.
 
-<mark>
-Caution: This package is in alpha stage. Expect bugs and changes. Test thoroughly before use.
-</mark>
+> Caution: This package is in alpha stage. Expect bugs and changes. Test thoroughly before use.
 
 ## Features
 
