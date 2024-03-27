@@ -199,4 +199,4 @@ Contributions to WPDrill are welcome. Please ensure that you follow the coding s
 
 ## License
 
-WPDrill is open-source software. The exact licensing terms are not specified in the provided context.
+WPDrill is open-source software.
