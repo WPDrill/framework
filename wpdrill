@@ -1,0 +1,43 @@
+#!/usr/bin/env php
+<?php
+
+define('WPDRILL_ROOT_PATH', __DIR__);
+
+
+use Symfony\Component\Console\Application;
+use WPDrill\Commands\MigrateCommand;
+use WPDrill\Commands\MigrateRefreshCommand;
+use WPDrill\Commands\MigrateResetCommand;
+use WPDrill\Commands\MigrateRollbackCommand;
+use WPDrill\Commands\PluginInfoCommand;
+use WPDrill\Commands\PluginSetupCommand;
+
+function _wpdrill()
+{
+    require_once './../../../wp-load.php';
+    require __DIR__ . '/vendor/autoload.php';
+
+
+    call_user_func(function($bootstrap) {
+        $bootstrap(__FILE__);
+    }, require(__DIR__.'/bootstrap/boot.php'));
+
+    /**
+     * Start the console application.
+     */
+    $app = new Application('Hello World', '1.0.0');
+//$app->setDefaultCommand("hello");
+
+    $app->add(new PluginSetupCommand());
+    $app->add(new MigrateCommand());
+    $app->add(new MigrateRollbackCommand());
+    $app->add(new MigrateRefreshCommand());
+    $app->add(new MigrateResetCommand());
+    $app->add(new PluginInfoCommand());
+
+// $app->add(new AnotherCommand());
+
+    $app->run();
+}
+
+_wpdrill();
