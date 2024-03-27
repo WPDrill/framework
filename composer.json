@@ -1,5 +1,5 @@
 {
-    "name": "reviewx-v2/reviewx",
+    "name": "wpdrill/framework",
     "description": "A WordPress Plugin",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
