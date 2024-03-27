@@ -187,7 +187,7 @@ Here is the view(twig) file
 
 ## Getting Started
 
-To get started with WPDrill, you need to have a basic understanding of WordPress plugin development as well as familiarity with JavaScript, PHP, Composer, NPM, Vue, and C.
+To get started with WPDrill, you need to have a basic understanding of WordPress plugin development as well as familiarity with PHP, JavaScript, Composer, NPM.
 
 ## Documentation
 
@@ -200,5 +200,3 @@ Contributions to WPDrill are welcome. Please ensure that you follow the coding s
 ## License
 
 WPDrill is open-source software. The exact licensing terms are not specified in the provided context.
-
-Please note that this is a basic documentation based on the provided context. For a more comprehensive documentation, more information about the project would be needed.
