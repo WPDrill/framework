@@ -19,6 +19,7 @@ WPDrill is a WordPress Plugin Development Framework for human. It's designed to 
 7. **Migrations**: WPDrill supports database migrations, allowing you to version control your database schema and apply changes incrementally.
 
 8. **View**: WPDrill provides a simple way to manage views in your WordPress plugin. You can easily create, edit, and manage views for your plugin.
+9.  **Query Builder**: WPDrill provides a simple way to manage database operations in your WordPress plugin. You can easily create, read, update, and delete records in your database.
 
 ## Getting Started
 
