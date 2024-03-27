@@ -2,6 +2,10 @@
 
 WPDrill is a WordPress Plugin Development Framework for human. It's designed to simplify the process of creating and managing WordPress plugins.
 
+<mark>
+Caution: This package is in alpha stage. Expect bugs and changes. Test thoroughly before use.
+</mark>
+
 ## Features
 
 1. **Menu Management**: WPDrill provides an easy way to add and manage menus in your WordPress plugin. You can easily add a new menu with an icon and position. For example, in `menu.php`, a new menu 'WPDrill' is added with a smiley icon and positioned at 3.
