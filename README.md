@@ -1,6 +1,6 @@
 # WPDrill - WordPress Plugin Development Framework
 
-WPDrill is a WordPress Plugin Development Framework designed to simplify the process of creating and managing WordPress plugins. It is built with a variety of languages and frameworks including JavaScript, PHP, Composer, NPM, Vue, and C.
+WPDrill is a WordPress Plugin Development Framework for human. It's designed to simplify the process of creating and managing WordPress plugins.
 
 ## Features
 
