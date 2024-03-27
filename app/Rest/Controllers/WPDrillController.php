@@ -19,7 +19,7 @@ class WPDrillController implements InvokableContract
     public function __invoke() {
         $user = User::where('id', 1)->first();
         //$user = $this->db->table('users')->where('id', 1)->first();
-        return wpdrill_rest($user)
+        return #[function-prefix]_rest($user)
             ->setHeader('Content-Type', 'application/json')
             ->details('User fetched successfully')
             ->success("User found");
