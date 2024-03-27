@@ -32,7 +32,7 @@ The installation and configuration process of WPDrill can be done in the followi
 1. **Download WPDrill**: You can download WPDrill from its official GitHub repository into `plugins` directory. Use the following command in your terminal to clone the repository:
 
 ```bash
-git clone https://github.com/WPDrill/framework.git
+git clone https://github.com/WPDrill/framework.git  wpdrill
 ```
 
 2. **Navigate to the WPDrill directory**: After cloning the repository, navigate to the WPDrill directory using the following command:
