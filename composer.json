@@ -11,6 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": ">=7.4",
         "nahid/apiz": "dev-master",
         "wpdrill/core": "1.0.0"
     },
