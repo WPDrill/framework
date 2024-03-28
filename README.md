@@ -53,8 +53,6 @@ composer install
 
 After installing the necessary dependencies, the next step is to initialize the plugin. Execute the following command in your terminal:
 
-bashCopy code
-
 ```bash
 ./wpdrill plugin:init
 ```
@@ -68,7 +66,6 @@ Open the Menu Configuration File: Navigate to the `bootstrap/menu.php` file in y
 Define the New Menu: In the menu.php file, use the `Menu::add()` method to define a new menu. Here's an example of how you can create a new menu:
 
 ```php
-
 use WPDrill\Facades\Menu;
 use App\Handlers\ReviewXDashboardMenu;
 
