@@ -11,6 +11,6 @@ class ExampleTest extends TestCase
      */
     public function test_that_true_false(): void
     {
-        $this->assertTrue(true);
+        $this->assertFalse(false);
     }
 }
