@@ -13,7 +13,7 @@
     "require": {
         "php": ">=7.4",
         "nahid/apiz": "dev-master",
-        "wpdrill/core": "1.0.0"
+        "wpdrill/core": "dev-master"
     },
 
     "autoload": {
@@ -28,13 +28,6 @@
         "symfony/var-dumper": "^5.5"
     },
    "repositories": [
-     {
-       "type": "path",
-       "url": "pkgs/core-wp",
-       "options": {
-         "symlink": true
-       }
-     },
      {
        "type": "vcs",
        "url": "https://github.com/WPDrill/core.git"
