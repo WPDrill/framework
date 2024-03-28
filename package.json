@@ -2,7 +2,7 @@
   "name": "vue-wp-starter",
   "version": "1.0.0",
   "description": "A WordPress Vue.js starter plugin",
-  "author": "Tareq Hasan <tareq@wedevs.com>",
+  "author": "Nahid Bin Azhar <nahid.dns@gmail.com>",
   "license": "GPLv2",
   "private": true,
   "scripts": {
