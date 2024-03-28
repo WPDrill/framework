@@ -24,8 +24,14 @@
             "app/Utilities/helpers.php"
         ]
     },
-    "require-dev": {
-        "symfony/var-dumper": "^5.4"
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+        "symfony/var-dumper": "^5.4",
+        "phpunit/phpunit": "10.*"
     },
    "repositories": [
      {
