@@ -24,6 +24,8 @@ WPDrill is a WordPress Plugin Development Framework for human. It's designed to 
 
 9. **Query Builder**: WPDrill provides a simple way to manage database operations in your WordPress plugin. You can easily create, read, update, and delete records in your database.
 
+10. **Shortcode**: The Shortcode feature in WPDrill allows developers to create reusable pieces of content that can be inserted into posts or pages using a simple tag. This feature is implemented using a combination of PHP classes and views.
+
 
 ## Installation
 
