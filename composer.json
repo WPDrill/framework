@@ -1,43 +1,35 @@
 {
-    "name": "wpdrill/framework",
-    "description": "A WordPress Plugin",
-    "type": "wordpress-plugin",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Nahid Bin Azhar",
-            "email": "nahid.dns@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=7.4",
-        "nahid/apiz": "dev-master",
-        "wpdrill/core": "1.0.0"
+  "name": "wpdrill/framework",
+  "description": "A WordPress Plugin",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Nahid Bin Azhar",
+      "email": "nahid.dns@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.4",
+    "nahid/apiz": "dev-master",
+    "wpdrill/core": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
     },
-
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        },
-        "files": [
-            "app/Utilities/helpers.php"
-        ]
-    },
-    "require-dev": {
-        "symfony/var-dumper": "^6.0"
-    },
-   "repositories": [
-     {
-       "type": "path",
-       "url": "pkgs/core-wp",
-       "options": {
-         "symlink": true
-       }
-     },
-     {
-       "type": "vcs",
-       "url": "https://github.com/WPDrill/core.git"
-     }
-   ]
+    "files": [
+      "app/Utilities/helpers.php"
+    ]
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.0"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/WPDrill/core.git"
+    }
+  ]
 }
