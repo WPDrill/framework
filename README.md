@@ -174,6 +174,8 @@ class WPDrillMenuHandler implements InvokableContract {
 }
 ```
 
+
+
 Here is the view(twig) file
 
 ```twig
@@ -184,6 +186,57 @@ Here is the view(twig) file
     {{ content }}
 </p>
 ```
+
+## Shortcode
+
+To add a new shortcode in WPDrill, you need to follow these steps:
+
+1. **Create a new Shortcode Class**: Create a new PHP class that implements the `ShortcodeContract`. This class should define a `render` method that returns the output of the shortcode. Here's an example:
+
+```php
+namespace App\Shortcodes;
+
+use WPDrill\Contracts\ShortcodeContract;
+use WPDrill\Facades\View;
+
+class MyNewShortcode implements ShortcodeContract
+{
+    public function render(array $attrs, string $content = null): string
+    {
+        // Default attributes can be defined here
+        $attrs = shortcode_atts(
+            [
+                'title' => 'Default Title',
+            ],
+            $attrs
+        );
+
+        // Use the View facade to render a view for this shortcode
+        return View::render('shortcode/mynewshortcode', [
+            'title' => $attrs['title'],
+            'content' => $content,
+        ]);
+    }
+}
+```
+
+2. **Register the Shortcode**: In the `bootstrap/shortcodes.php` file, use the `Shortcode::add` method to register the new shortcode. Here's how you can do it:
+
+```php
+use WPDrill\Facades\Shortcode;
+use WPDrill\Plugin;
+
+return function(Plugin $plugin) {
+    Shortcode::add('mynewshortcode', \App\Shortcodes\MyNewShortcode::class);
+    // Existing shortcodes...
+};
+```
+
+In this example, a new shortcode `[mynewshortcode]` is registered. When this shortcode is used in a post or page, the `render` method of the `MyNewShortcode` class is executed.
+
+3. **Create the View**: Create a new PHP file in the `views/shortcode` directory for the view of this shortcode. This file should return the HTML that you want to display when the shortcode is used.
+
+Please replace `MyNewShortcode`, `mynewshortcode`, and `shortcode/mynewshortcode` with the actual class name, shortcode tag, and view file path for your shortcode.
 
 ## Getting Started
 
