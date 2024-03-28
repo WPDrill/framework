@@ -1,8 +1,8 @@
 # WPDrill - WordPress Plugin Development Framework
 
-WPDrill is a WordPress Plugin Development Framework for human. It's designed to simplify the process of creating and managing WordPress plugins.
+WPDrill is a WordPress Plugin Development Framework for humans. It's designed to simplify the process of creating and managing WordPress plugins.
 
-> ⚠️ Caution: This package is in alpha stage. Expect bugs and changes. Test thoroughly before use.
+> ⚠️ Caution: This package is in the alpha stage. Expect bugs and changes. Test thoroughly before use.
 
 ## Features
 
@@ -31,7 +31,7 @@ WPDrill is a WordPress Plugin Development Framework for human. It's designed to 
 
 The installation and configuration process of WPDrill can be done in the following steps:
 
-1. **Download WPDrill**: You can download WPDrill from its official GitHub repository into `plugins` directory. Use the following command in your terminal to clone the repository:
+1. **Download WPDrill**: You can download WPDrill from its official GitHub repository into the `plugins` directory. Use the following command in your terminal to clone the repository:
 
 ```bash
 git clone https://github.com/WPDrill/framework.git
@@ -53,8 +53,6 @@ composer install
 
 After installing the necessary dependencies, the next step is to initialize the plugin. Execute the following command in your terminal:
 
-bashCopy code
-
 ```bash
 ./wpdrill plugin:init
 ```
@@ -68,7 +66,6 @@ Open the Menu Configuration File: Navigate to the `bootstrap/menu.php` file in y
 Define the New Menu: In the menu.php file, use the `Menu::add()` method to define a new menu. Here's an example of how you can create a new menu:
 
 ```php
-
 use WPDrill\Facades\Menu;
 use App\Handlers\ReviewXDashboardMenu;
 
@@ -77,7 +74,7 @@ Menu::add('ReviewX Dashboard', new ReviewXDashboardMenu(), 'manage_options')
         ->position(3);
 ```
 
-You can use different types of approach to bind handler, the previous example was an invokable handler instance(That means it should contain `__invoke()` method.
+You can use different types of approaches to bind handlers, the previous example was an invokable handler instance(That means it should contain `__invoke()` method.
 
 #### Direct invokable class binding
 
@@ -128,7 +125,7 @@ Router::get('/wpdrill', [\App\Rest\Controllers\WPDrillController::class, 'show']
 
 In this example, a GET route '/wpdrill' is defined. When this route is accessed, the `show` method of the `WPDrillController` class is executed. Please replace the `WPDrillController` and `show` with the actual controller and method that should handle the request for this route.
 
-The route controller support the following
+The route controller supports the following
 
 - Invokable Controller Instance (should contains `__invoke()` method in the class instance)
 
@@ -141,7 +138,7 @@ The route controller support the following
 
 ### Route Group
 
-WPDrill also support route grouping, here is the example
+WPDrill also supports route grouping, here is the example
 
 ```php
 Route::group(['prefix' => '/info'], function() {
@@ -156,27 +153,25 @@ Route::group(['prefix' => '/info'], function() {
 
 ## View
 
-WPDrill helps you to develop high level templating option, it comes with Twig template engine by default. Here is an example
+WPDrill helps you to develop a high-level templating option, it comes with a Twig template engine by default. Here is an example
 
 ```php
-//app/Handlers
+// app/Handlers
 
 use WPDrill\Contracts\InvokableContract;
 use WPDrill\Facades\View;
 
-class WPDrillMenuHandler implements InvokableContract {
-
-	public function __invoke()
+class WPDrillMenuHandler implements InvokableContract
+{
+    public function __invoke()
     {
-		 View::output('wpdrill', [
+        View::output('wpdrill', [
             'title' => 'Welcome to WPDrill',
             'content' => 'A WordPress Plugin development framework for humans',
         ]);
-	}
+    }
 }
 ```
-
-
 
 Here is the view(twig) file
 
@@ -242,7 +237,7 @@ Please replace `MyNewShortcode`, `mynewshortcode`, and `shortcode/mynewshortcode
 
 ## Getting Started
 
-To get started with WPDrill, you need to have a basic understanding of WordPress plugin development as well as familiarity with PHP, JavaScript, Composer, NPM.
+To get started with WPDrill, you need to have a basic understanding of WordPress plugin development as well as familiarity with PHP, JavaScript, Composer, and NPM.
 
 ## Documentation
 
