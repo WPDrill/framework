@@ -54,7 +54,7 @@ composer install
 After installing the necessary dependencies, the next step is to initialize the plugin. Execute the following command in your terminal:
 
 ```bash
-./wpdrill plugin:init
+php wpdrill plugin:init
 ```
 
 That's all! Now, proceed to your WordPress admin dashboard and activate your freshly created plugin.
