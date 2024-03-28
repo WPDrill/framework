@@ -31,6 +31,7 @@ config.codekit
 /libpeerconnection.log
 npm-debug.log
 testem.log
+.phpunit.result.cache
 
 # Compiled source #
 ###################
