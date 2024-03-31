@@ -14,6 +14,7 @@ return [
     ],
 
     'providers' => [
+        \WPDrill\Providers\ShortcodeServiceProvider::class,
         \WPDrill\Providers\DBServiceProvider::class,
         \WPDrill\Providers\RequestServiceProvider::class,
         \WPDrill\Providers\MenuServiceProvider::class,
@@ -22,6 +23,7 @@ return [
         \WPDrill\Providers\EnqueueServiceProvider::class,
         \WPDrill\Providers\RoutingServiceProvider::class,
         \WPDrill\Providers\MigrationServiceProvider::class,
+        \WPDrill\Providers\CommonServiceProvider::class,
 
 
         \App\Providers\PluginServiceProvider::class,

@@ -6,7 +6,7 @@ return function (string $file) {
     $plugin = new Plugin($file);
 
     \WPDrill\Facade::setFacadeApplication($plugin);
-    \WPDrill\Model::setFacadeApplication($plugin);
+    \WPDrill\Models\Model::setFacadeApplication($plugin);
 
     $fn = null;
     if (php_sapi_name() !== 'cli') {

@@ -2,12 +2,9 @@
 
 namespace App\Models;
 
-use WPDrill\Model;
+use WPDrill\Models\Model;
 
 class User extends Model
 {
-	public static function getTableName(): string
-	{
-		return 'users';
-	}
+    protected static $table = 'users';
 }
