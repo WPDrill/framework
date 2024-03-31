@@ -56,6 +56,11 @@ After installing the necessary dependencies, the next step is to initialize the 
 ```bash
 php wpdrill plugin:init
 ```
+OR
+
+```bash
+./wpdrill plugin:init
+```
 
 That's all! Now, proceed to your WordPress admin dashboard and activate your freshly created plugin.
 
