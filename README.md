@@ -54,6 +54,11 @@ composer install
 After installing the necessary dependencies, the next step is to initialize the plugin. Execute the following command in your terminal:
 
 ```bash
+php wpdrill plugin:init
+```
+OR
+
+```bash
 ./wpdrill plugin:init
 ```
 
