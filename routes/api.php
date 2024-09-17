@@ -7,7 +7,7 @@ Route::get('/wpdrill', \App\Rest\Controllers\WPDrillController::class)->middlewa
 
 
 Route::group(['prefix' => '/info', 'middleware' => function () {
-    return false;
+    return true;
 }], function() {
     Route::get('/about', function () {
         return [
