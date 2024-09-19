@@ -28,4 +28,27 @@ return [
 
         \App\Providers\PluginServiceProvider::class,
     ],
+
+    'build' => [
+        'output_dir' => '.dist',
+
+        'commands' => [
+            ['composer', 'dump-autoload'],
+            ['yarn'],
+            ['yarn', 'build'],
+        ],
+
+        'cleanup' => [
+            'composer.json',
+            'composer.lock',
+            'scoper.inc.php',
+            '.editorconfig',
+            '.gitignore',
+            '.php-cs-fixer.cache',
+            'package.json',
+            'package-lock.json',
+            'tests',
+            '.env.dev'
+        ],
+    ],
 ];

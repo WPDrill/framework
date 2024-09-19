@@ -9,7 +9,7 @@ use Popup\Isolated\Symfony\Component\Finder\Finder;
 return [
     'prefix' => "#[root-namespace]",
     // string|null
-    'output-dir' => null,
+    //'output-dir' => null,
     // string|null
     'finders' => [],
     // list<Finder>
