@@ -34,8 +34,8 @@ return [
 
         'commands' => [
             ['composer', 'dump-autoload'],
-            ['yarn'],
-            ['yarn', 'build'],
+//            ['yarn'],
+//            ['yarn', 'build'],
         ],
 
         'cleanup' => [

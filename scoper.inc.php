@@ -23,7 +23,10 @@ return [
     // list<string|regex>
     'exclude-constants' => [],
     // list<string|regex>
-    'exclude-classes' => [],
+    'exclude-classes' => [
+        \wpdb::class,
+        '/^WP_.*/',
+    ],
     // list<string|regex>
     'exclude-functions' => [],
     // list<string|regex>
