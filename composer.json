@@ -18,7 +18,7 @@
 
     "autoload": {
         "psr-4": {
-            "#[root-namespace]\\App\\": "app/"
+            "App\\": "app/"
         },
         "files": [
             "app/Utilities/helpers.php"
