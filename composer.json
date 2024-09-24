@@ -1,6 +1,6 @@
 {
     "name": "wpdrill/framework",
-    "description": "A WordPress Plugin",
+    "description": "A WordPress Plugin Development Framework for Humans",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -18,7 +18,7 @@
 
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "#[root-namespace]\\App\\": "app/"
         },
         "files": [
             "app/Utilities/helpers.php"

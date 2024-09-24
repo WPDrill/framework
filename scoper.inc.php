@@ -1,10 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace Popup;
+namespace #[root-namespace];
 
 // scoper.inc.php
-use Popup\Isolated\Symfony\Component\Finder\Finder;
+use Isolated\Symfony\Component\Finder\Finder;
+
 \ini_set('memory_limit', '1024M');
 return [
     'prefix' => "#[root-namespace]",
