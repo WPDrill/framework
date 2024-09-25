@@ -240,6 +240,23 @@ In this example, a new shortcode `[mynewshortcode]` is registered. When this sho
 
 Please replace `MyNewShortcode`, `mynewshortcode`, and `shortcode/mynewshortcode` with the actual class name, shortcode tag, and view file path for your shortcode.
 
+## Build
+
+To build a plugin for production, you can follow these steps:
+
+- Navigate to Your Plugin Directory: Open your terminal and navigate to the directory where your plugin is located.
+
+- Run the Build Command:
+
+  ```bash
+  ./wpdrill plugin:build --prod
+  ```
+
+
+You can skip `--prod` if it's not a production build.
+
+If you need any customization for the build, just goto `config/plugin` and configure the `build` section as you want.
+
 ## Getting Started
 
 To get started with WPDrill, you need to have a basic understanding of WordPress plugin development as well as familiarity with PHP, JavaScript, Composer, and NPM.
