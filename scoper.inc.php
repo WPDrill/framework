@@ -1,12 +1,15 @@
 <?php
 
 declare (strict_types=1);
+
 namespace #[root-namespace];
 
-// scoper.inc.php
+\ini_set('memory_limit', '1024M');
+\ini_set('max_execution_time', '300');
+
 use Isolated\Symfony\Component\Finder\Finder;
 
-\ini_set('memory_limit', '1024M');
+
 return [
     'prefix' => "#[root-namespace]",
     // string|null

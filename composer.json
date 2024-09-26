@@ -15,6 +15,12 @@
         "nahid/apiz": "dev-master",
         "wpdrill/core": "dev-master"
     },
+    "require-dev": {
+      "symfony/var-dumper": "^5.4",
+      "phpunit/phpunit": "8.*",
+      "bamarni/composer-bin-plugin": "^1.8",
+      "humbug/php-scoper": "^0.16"
+    },
 
     "autoload": {
         "psr-4": {
@@ -24,20 +30,32 @@
             "app/Utilities/helpers.php"
         ]
     },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  },
-  "require-dev": {
-        "symfony/var-dumper": "^5.4",
-        "phpunit/phpunit": "8.*",
-        "bamarni/composer-bin-plugin": "^1.8"
+    "autoload-dev": {
+      "psr-4": {
+        "Tests\\": "tests/"
+      }
     },
-   "repositories": [
-     {
-       "type": "vcs",
-       "url": "https://github.com/WPDrill/core.git"
-     }
-   ]
+     "repositories": [
+       {
+         "type": "vcs",
+         "url": "https://github.com/WPDrill/core.git"
+       }
+     ],
+    "config": {
+      "allow-plugins": {
+        "bamarni/composer-bin-plugin": true
+      }
+    },
+    "scripts": {
+      "php-scoper": [
+        "composer bin php-scoper install --dev humbug/php-scoper"
+      ]
+    },
+    "extra": {
+      "composer-bin-plugin": {
+        "directories": [
+          "php-scoper"
+        ]
+      }
+    }
 }

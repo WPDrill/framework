@@ -26,7 +26,7 @@ function _wpdrill()
     /**
      * Start the console application.
      */
-    $app = new Application('Hello World', '1.0.0');
+    $app = new Application('WPDrill', '1.0.0');
 //$app->setDefaultCommand("hello");
 
     $app->add(new PluginSetupCommand());
