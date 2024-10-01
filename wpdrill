@@ -12,6 +12,7 @@ use WPDrill\Commands\MigrateRollbackCommand;
 use WPDrill\Commands\PluginInfoCommand;
 use WPDrill\Commands\PluginSetupCommand;
 use WPDrill\Commands\PluginBuildCommand;
+use WPDrill\Commands\ViewCacheCommand;
 
 function _wpdrill()
 {
@@ -19,8 +20,8 @@ function _wpdrill()
     require __DIR__ . '/vendor/autoload.php';
 
 
-    call_user_func(function($bootstrap) {
-        $bootstrap(__FILE__);
+   $plugin = call_user_func(function($bootstrap) {
+       return $bootstrap(__FILE__);
     }, require(__DIR__.'/bootstrap/boot.php'));
 
     /**
@@ -36,6 +37,7 @@ function _wpdrill()
     $app->add(new MigrateResetCommand());
     $app->add(new PluginInfoCommand());
     $app->add(new PluginBuildCommand());
+    $app->add(new ViewCacheCommand($plugin));
 
 // $app->add(new AnotherCommand());
 

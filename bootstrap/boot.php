@@ -17,4 +17,6 @@ return function (string $file) {
 
     $plugin->make($fn);
 
+    return $plugin;
+
 };

@@ -33,9 +33,12 @@ return [
         'output_dir' => '.dist',
 
         'commands' => [
-            ['composer', 'dump-autoload'],
-//            ['yarn'],
-//            ['yarn', 'build'],
+            'before' => [
+
+            ],
+            'after' => [
+                ['composer', 'dump-autoload'],
+            ]
         ],
 
         'cleanup' => [
