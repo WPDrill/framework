@@ -12,4 +12,10 @@ return [
         'tag_variable' => ['{{', '}}'],
         'interpolation' => ['#{', '}'],
     ],
+
+    'functions' => [
+        '__' => function ($text, $domain = 'default') {
+            return __($text, $domain);
+        },
+    ]
 ];
