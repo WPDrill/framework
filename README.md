@@ -54,11 +54,6 @@ composer install
 After installing the necessary dependencies, the next step is to initialize the plugin. Execute the following command in your terminal:
 
 ```bash
-php wpdrill plugin:init
-```
-OR
-
-```bash
 ./wpdrill plugin:init
 ```
 
@@ -72,7 +67,7 @@ Define the New Menu: In the menu.php file, use the `Menu::add()` method to defin
 
 ```php
 use WPDrill\Facades\Menu;
-use App\Handlers\ReviewXDashboardMenu;
+use Rvx\Handlers\ReviewXDashboardMenu;
 
 Menu::add('ReviewX Dashboard', new ReviewXDashboardMenu(), 'manage_options')
         ->icon('dashicons-smiley')
@@ -85,7 +80,7 @@ You can use different types of approaches to bind handlers, the previous example
 
 ```php
 use WPDrill\Facades\Menu;
-use App\Handlers\ReviewXDashboardMenu;
+use Rvx\Handlers\ReviewXDashboardMenu;
 
 Menu::add('ReviewX Dashboard', ReviewXDashboardMenu::class , 'manage_options')
         ->icon('dashicons-smiley')
@@ -96,7 +91,7 @@ Menu::add('ReviewX Dashboard', ReviewXDashboardMenu::class , 'manage_options')
 
 ```php
 use WPDrill\Facades\Menu;
-use App\Handlers\ReviewXDashboardMenu;
+use Rvx\Handlers\ReviewXDashboardMenu;
 
 Menu::add('ReviewX Dashboard', [ReviewXDashboardMenu::class, 'dashboard'] , 'manage_options')
         ->icon('dashicons-smiley')
@@ -107,7 +102,7 @@ Menu::add('ReviewX Dashboard', [ReviewXDashboardMenu::class, 'dashboard'] , 'man
 
 ```php
 use WPDrill\Facades\Menu;
-use App\Handlers\ReviewXDashboardMenu;
+use Rvx\Handlers\ReviewXDashboardMenu;
 
 Menu::add('ReviewX Dashboard', function() {
     echo "Dashboard";
@@ -125,7 +120,7 @@ To create a route in WPDrill, you need to define it in the `routes/api.php` file
 
 use WPDrill\Routing\Router;
 
-Router::get('/wpdrill', [\App\Rest\Controllers\WPDrillController::class, 'show']);
+Router::get('/wpdrill', [\Rvx\Rest\Controllers\WPDrillController::class, 'show']);
 ```
 
 In this example, a GET route '/wpdrill' is defined. When this route is accessed, the `show` method of the `WPDrillController` class is executed. Please replace the `WPDrillController` and `show` with the actual controller and method that should handle the request for this route.
@@ -134,9 +129,9 @@ The route controller supports the following
 
 - Invokable Controller Instance (should contains `__invoke()` method in the class instance)
 
-- Invokable class binding, ex: `\App\Rest\Controllers\WPDrillController::class`) (should contains `__invoke()` method in the class)
+- Invokable class binding, ex: `\Rvx\Rest\Controllers\WPDrillController::class`) (should contains `__invoke()` method in the class)
 
-- Class and method mapping, ex: `[\App\Rest\Controllers\WPDrillController::class, 'method_name'`]`
+- Class and method mapping, ex: `[\Rvx\Rest\Controllers\WPDrillController::class, 'method_name'`]`
 
 - Closure
 
@@ -196,7 +191,7 @@ To add a new shortcode in WPDrill, you need to follow these steps:
 1. **Create a new Shortcode Class**: Create a new PHP class that implements the `ShortcodeContract`. This class should define a `render` method that returns the output of the shortcode. Here's an example:
 
 ```php
-namespace App\Shortcodes;
+namespace Rvx\Shortcodes;
 
 use WPDrill\Contracts\ShortcodeContract;
 use WPDrill\Facades\View;
@@ -229,7 +224,7 @@ use WPDrill\Facades\Shortcode;
 use WPDrill\Plugin;
 
 return function(Plugin $plugin) {
-    Shortcode::add('mynewshortcode', \App\Shortcodes\MyNewShortcode::class);
+    Shortcode::add('mynewshortcode', \Rvx\Shortcodes\MyNewShortcode::class);
     // Existing shortcodes...
 };
 ```
@@ -240,23 +235,18 @@ In this example, a new shortcode `[mynewshortcode]` is registered. When this sho
 
 Please replace `MyNewShortcode`, `mynewshortcode`, and `shortcode/mynewshortcode` with the actual class name, shortcode tag, and view file path for your shortcode.
 
-## Build
+## Load Localize Script
 
-To build a plugin for production, you can follow these steps:
+To add a localized script this way
 
-- Navigate to Your Plugin Directory: Open your terminal and navigate to the directory where your plugin is located.
-
-- Run the Build Command:
-
-  ```bash
-  ./wpdrill plugin:build --prod
-  ```
-
-
-You can skip `--prod` if it's not a production build.
-
-If you need any customization for the build, just goto `config/plugin` and configure the `build` section as you want.
-
+```php
+    'localize_scripts' => [
+        ['handle' => 'handler_name', 'key' => 'rvxUserAccess', 'data' => [
+        'key' => 'value',
+        'key' => 'value',
+        ]]
+    ],
+```
 ## Getting Started
 
 To get started with WPDrill, you need to have a basic understanding of WordPress plugin development as well as familiarity with PHP, JavaScript, Composer, and NPM.
