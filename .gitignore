@@ -71,3 +71,7 @@ Thumbs.db
 *.sql
 *.sqlite
 .env.dev
+
+# Cache #
+###################
+/storage
