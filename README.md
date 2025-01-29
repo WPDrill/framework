@@ -188,6 +188,7 @@ Here is the view(twig) file
     {{ content }}
 </p>
 ```
+Note: For view related configuration, check out `config/view.php`. By default, for above example - `resources/views/wpdrill.twig` file will be loaded. Change `'template_extension' => 'html'` to load resources/views/wpdrill.**html**
 
 ## Shortcode
 
